@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+ margin:0 auto;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body bgcolor="#E6E6FA">
+
+<h1 align="center">Build the Family tree of Mughal Empire</h1>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="Babur_of_India.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+<img id="drag2" src="humayun.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+<img id="drag3" src="Akbar.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+<img id="drag4" src="jahangir.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+<img id="drag5" src="Shahjahan.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+<img id="drag6" src="aurangzeb.jpg" draggable="true" ondragstart="drag(event)" width="70" height="70">
+
+</body>
+</html>
+
