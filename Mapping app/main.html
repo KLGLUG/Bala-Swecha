@@ -1,0 +1,150 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>
+KLUG FIRST PROJECT
+</title>
+<style type="text/css">
+*
+{
+margin:0px;
+padding=0px;
+}
+.dragzone0
+{
+height:100px;
+width:15%;
+float:left-side;
+margin-top:50px;
+margin-left:2%;
+}
+.dropzone0
+{
+height:100px;
+width:15%;
+border:2px solid black;
+float:left-side;
+margin-top:50px;
+margin-left:20%;
+}
+
+.dragzone1
+{
+height:100px;
+width:15%;
+float:left-side;
+margin-top:50px;
+margin-left:2%;
+}
+.dropzone1
+{
+height:100px;
+width:15%;
+border:2px solid black;
+float:left-side;
+margin-top:50px;
+margin-left:20%;
+}
+.dragzone2
+{
+height:100px;
+width:15%;
+float:left-side;
+margin-top:50px;
+margin-left:2%;
+}
+.dropzone2
+{
+height:100px;
+width:15%;
+border:2px solid black;
+float:left-side;
+margin-top:50px;
+margin-left:20%;
+}
+
+</style>
+
+
+
+<script type="text/javascript">
+var id;
+function allowDrop0(ev)
+{
+	ev.preventDefault();
+}
+function dragStart0(ev)
+{
+	id=ev.target.id;
+}
+function drop0(ev)
+{
+	ev.target.appendChild(document.getElementById(id));
+}
+</script>
+
+<script type="text/javascript">
+var id;
+function allowDrop1(ev)
+{
+	ev.preventDefault();
+}
+function dragStart1(ev)
+{
+	id=ev.target.id;
+}
+function drop1(ev)
+{
+	ev.target.appendChild(document.getElementById(id));
+}
+</script>
+
+<script type="text/javascript">
+var id;
+function allowDrop2(ev)
+{
+	ev.preventDefault();
+}
+function dragStart2(ev)
+{
+	id=ev.target.id;
+}
+function drop2(ev)
+{
+	ev.target.appendChild(document.getElementById(id));
+}
+</script>
+
+
+
+<body align="center">
+<div class="dragzone0">
+<img src="image/anr.jpg" id="dragelement" height="100px"
+ondragstart="dragStart0(event)">
+</div>
+<div class="dropzone0" ondragover="allowDrop0(event)" ondrop="drop0(event)">
+</div>
+
+
+
+<div class="dragzone1">
+<
+<img src="image/nag.jpg" id="dragelement1" height="100px"
+ondragstart="dragStart1(event)">
+</div>
+<div class="dropzone1" ondragover="allowDrop1(event)" ondrop="drop1(event)">
+</div>
+
+
+<div class="dragzone2">
+<img src="image/chay.jpg" id="dragelement2" height="100px"
+ondragstart="dragStart2(event)">
+</div>
+<div class="dropzone2" ondragover="allowDrop2(event)" ondrop="drop2(event)">
+</div>
+
+
+
+</body>
+</head>
+</html>

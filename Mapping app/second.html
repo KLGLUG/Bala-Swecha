@@ -1,0 +1,124 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>
+KLUG FIRST PROJECT
+</title>
+<style type="text/css">
+.dragzone0
+{
+height:100px;
+width:30%;
+float:left-side;
+margin-top:50px;
+margin-left:2%;
+}
+.dropzone0
+{
+height:100px;
+width:200px;
+border:2px solid black;
+float:left-side;
+margin-top:50px;
+margin-left:20%;
+}
+.dropzone1
+{
+height:100px;
+width:200px;
+border:2px solid black;
+float:right-side;
+margin-top:50px;
+margin-left:20%;
+}
+.dragzone1
+{
+height:100px;
+width:30%;
+float:right-side;
+margin-top:50px;
+margin-left:2%;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript">
+var id;
+function allowDrop(ev)
+{
+	ev.preventDefault();
+}
+function dragStart(ev)
+{
+	id=ev.target.id;
+}
+function drop(ev)
+{
+	ev.target.appendChild(document.getElementById(id));
+}
+</script>
+
+<body bgcolor="orange">
+<div style="width:100%;margin-left="10%"> <!-- Main Div -->
+<div style="float:left; width:30%;">
+
+<div class="dragzone0">
+<img src="ind.jpg" id="dragelement1" height="100px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone0" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+
+
+<div class="dragzone0">
+
+<img src="pak.jpg" id="dragelement2" height="100px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone0" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+
+
+<div class="dragzone0">
+<img src="ame.jpg" id="dragelement3" height="100px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone0" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+</div>
+<div style="float:right; width:50%;">
+
+<div class="dragzone1">
+<img src="india.png" id="dragelement4" height="50px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone1" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+
+<div class="dragzone1">
+<img src="pakisthan.png" id="dragelement5" height="50px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone1" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+
+<div class="dragzone1">
+<img src="america.png" id="dragelement6" height="50px"
+ondragstart="dragStart(event)">
+</div>
+<div class="dropzone1" ondragover="allowDrop(event)" ondrop="drop(event)">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</head>
+</html>
